@@ -1,0 +1,12 @@
+ac640d10d681ccbec026f39a5103ce54 *DESCRIPTION
+11b772bc374f887d96cbbf1002c6b1a8 *NAMESPACE
+c29830c1f0cac8029dda29b30216df60 *R/ProbeConvert.R
+a1bc65f85481210e7972d10e14fc89c9 *R/sysdata.rda
+77dee4fae23db44d4003e1c9b3300c69 *build/vignette.rds
+effa073e0ed2a015a826da04961fbc85 *inst/doc/OryzaProbe_vignette.R
+929a3cee798e5741c693273292550324 *inst/doc/OryzaProbe_vignette.Rmd
+bda5178541bfebc428b5aea28d2cb895 *inst/doc/OryzaProbe_vignette.html
+21981198c48d39c95f9d6722f84078fc *man/probeConvert.Rd
+7f18ec1174b89ed3a58a08520cd2ece9 *tests/testthat.R
+40b0456eb12bfbb90125f86b625c8d3b *tests/testthat/test_OryzaProbe.R
+929a3cee798e5741c693273292550324 *vignettes/OryzaProbe_vignette.Rmd

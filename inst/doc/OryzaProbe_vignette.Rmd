@@ -1,0 +1,36 @@
+---
+title: "OryzaProbe_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{OryzaProbe_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = nzchar(Sys.getenv("MY_ENV_VARIABLE"))
+)
+```
+
+
+The expression matrix can be downloaded and extracted from NCBI using the GEOquery package. Here, a dataset GSE75471 was used as an example. Here, we can see the row names are microarray probe ID (12, 13, 14......), and each column is the expression level of each sample. In brief, for one available expression matrix, the row name should be the rice microarray probe ID, and each column should be expression level of genes in each sample.
+```{r prep}
+#library(GEOquery)
+#expr <- getGEO("GSE75471")[[1]]
+library(OryzaProbe)
+expr <- test_file
+head(test_file)
+```
+
+```{r ID conversion without merging multiple probes}
+library(OryzaProbe)
+formatted_expr <- probeConvert(exprMatrix = expr)
+head(formatted_expr)
+```
+```{r ID conversion with merging multiple probes}
+formatted_expr1 <- probeConvert(exprMatrix = test_file, probeMerge = T)
+head(formatted_expr1)
+```
